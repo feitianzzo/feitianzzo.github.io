@@ -1,0 +1,117 @@
+:root {
+	--trans-light: rgba(255, 255, 255, 0.88);
+	--trans-dark: rgba(0, 0, 0, 0);
+	--border-style: 1px solid rgb(169, 169, 169);
+	--backdrop-filter: blur(5px) saturate(150%);
+  }
+
+
+/*文章的整体背景*/
+#web_bg {
+	background-image: url("./bg-light"); 
+}
+
+[data-theme=dark] #web_bg {
+	background-image: url("./bg-dark.jpg"); 
+	background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%
+}
+
+/*个人信息栏*/
+/*白天主题下的配置*/
+#aside-content>.card-widget.card-info {
+    /*换成自己图片的地址*/
+    background-image: url('./bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%
+}
+/*黑暗主题下的配置*/
+[data-theme=dark] #aside-content>.card-widget.card-info {
+    /*换成自己图片的地址*/
+    background-image: url('./bbg.png') !important
+}
+
+
+
+/*公告栏*/
+#aside-content>.card-widget.card-announcement {
+	background: var(--trans-light);
+	border-radius: 18px;
+	border: var(--border-style);
+}
+
+
+
+/*侧边栏卡片，除个人信息和公告栏*/
+#aside-content>.sticky_layout>.card-widget {
+	background: var(--trans-light);
+	border-radius: 18px;
+	border: var(--border-style);
+}
+
+/*主页文章列表*/
+#recent-posts>.recent-post-items>.recent-post-item {
+	background: var(--trans-light);
+	border-radius: 25px;
+	border: var(--border-style);
+}
+
+/*文章页面*/
+.layout>#post {
+	background: var(--trans-light);
+	border: var(--border-style);
+	border-radius: 20px;
+	--border-style: 1px solid rgb(169, 169, 169);
+}
+
+/*分类标签页面*/
+.layout>#page,
+.layout>#tag, /*标签二级页面*/
+.layout>#category /*分类二级页面*/{
+	background: var(--trans-light);
+	border: var(--border-style);
+	border-radius: 20px;
+	--border-style: 1px solid rgb(169, 169, 169);
+}
+
+/*时间轴页面*/
+.layout>#archive {
+	background: var(--trans-light);
+	border: var(--border-style);
+	border-radius: 20px;
+	--border-style: 1px solid rgb(169, 169, 169);
+}
+
+  /* 夜间模式遮罩 */
+  [data-theme="dark"] #aside-content>.card-widget.card-announcement, /*公告栏*/
+  [data-theme="dark"] #aside-content>.sticky_layout>.card-widget, /*侧边栏卡片，除个人信息和公告栏*/
+  [data-theme="dark"] #recent-posts>.recent-post-items>.recent-post-item, /*主页文章列表*/
+  [data-theme="dark"] .layout>#post, /*文章页面*/
+  [data-theme="dark"] .layout>#page, /*分类标签页面*/
+  [data-theme="dark"] .layout>#tag, /*标签二级页面*/
+  [data-theme="dark"] .layout>#category /*分类二级页面*/ {
+	background: var(--trans-dark);
+  }
+    
+  /* 阅读模式 */
+  .read-mode .layout>#post {
+	background: rgba(250, 249, 222, 0.681) !important;
+  }
+  
+  /* 夜间模式下的阅读模式 */
+  [data-theme="dark"] .read-mode .layout>#post {
+	background: rgba(25, 25, 25, 0.9) !important;
+	color: #ffffff;
+  }
+
+
+ /* 导航栏 */
+ #page-header.nav-fixed #nav {
+	background: rgba(255, 255, 255, 0.88);
+  }
+	  
+ [data-theme="dark"] #page-header.nav-fixed #nav {
+	background: rgba(0, 0, 0, 0.7) !important;
+  }
