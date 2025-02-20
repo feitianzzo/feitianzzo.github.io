@@ -8,7 +8,7 @@
 
 /*文章的整体背景*/
 #web_bg {
-	background-image: url("./bg-light"); 
+	background-image: url("./bg-light.jpg"); 
 }
 
 [data-theme=dark] #web_bg {
